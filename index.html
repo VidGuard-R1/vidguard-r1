@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>VidGuard-R1: Detecting AI-Generated Videos via Multimodal LLMs Fine-Tuned with RL</title>
+  <link rel="icon" type="image/png" href="static/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+      <div class="green-part">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><span class="first-line">VidGuard-R1:</span>
+  <img src="static/images/favicon.png" alt="" width="84" height="84" style="vertical-align:middle; transform: rotate(-15deg);" />
+</i><br />
+                            Detecting AI-Generated Videos via Multimodal LLMs Fine-Tuned with RL</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="http://cs.utexas.edu/~kjpark/" target="_blank">Kyoungjun Park</a><sup>1</sup>&nbsp&nbsp&nbsp</span>
+              <span class="author-block">
+                <a href="https://www.microsoft.com/en-us/research/people/yifanyang/" target="_blank">Yifan Yang</a><sup>2</sup>&nbsp&nbsp&nbsp</span>
+              <span class="author-block">
+                <a href="https://www.microsoft.com/en-us/research/people/jyi/" target="_blank">Juheon Yi</a><sup>2</i></sup>&nbsp&nbsp&nbsp</span>
+              <span class="author-block">
+                <a href="https://dl.acm.org/profile/99661016041" target="_blank">Shicheng Zheng</a><sup>2</sup>&nbsp&nbsp&nbsp</span>
+              <span class="author-block">
+                <a href="https://www.cs.utexas.edu/~mmuaz/" target="_blank">Muhammad Muaz</a><sup>1</sup>&nbsp&nbsp&nbsp</span>
+              <span class="author-block">
+                <a href="https://www.microsoft.com/en-us/research/people/yifeishen/" target="_blank">Yifei Shen</a><sup>2</sup>&nbsp&nbsp&nbsp</span>
+
+              <span class="author-block">
+                <a href="https://www.microsoft.com/en-us/research/people/dongqihan/" target="_blank">Dongqi Han</a><sup>2</sup>&nbsp&nbsp&nbsp</span>
+              <span class="author-block">
+                <a href="https://www.microsoft.com/en-us/research/people/caihuashan/" target="_blank">Caihua Shan</a><sup>2</sup>&nbsp&nbsp&nbsp</span>
+              <span class="author-block">
+                <a href="https://www.cs.utexas.edu/~lili/" target="_blank">Lili Qiu</a><sup>1,2</sup>&nbsp&nbsp&nbsp</span>
+
+            <div class="is-size-5 publication-authors">
+              
+              <span class="author-block"><sup>1</sup> UT Austin&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+              <span class="author-block"><sup>2</sup> Microsoft Corporation&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+            <!-- </div>
+            <div class="is-size-5 publication-authors"> -->
+              <!-- <span class="author-block">Conferance name and year</span> -->
+
+              <br>
+            </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- Arxiv PDF link
+                  <span class="link-block">
+                    <a href="TBD" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Supplementary PDF link
+                  <span class="link-block">
+                    <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/kyoungjunpark/VidGuard-R1" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <img src="static/images/teaser.png" alt="Teaser image" />
+      <!-- <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2> -->
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+
+<!-- Paper abstract -->
+     <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The rapid rise of AI-generated videos creates urgent risks, from misinformation to reputational harm, making reliable detection tools essential. Beyond accuracy, detectors must also explain their decisions to ensure transparency. We present VidGuard-R1, the first video authenticity detector that fine-tunes a multimodal large language model (MLLM) with group relative policy optimization (GRPO). VidGuard-R1 combines strong accuracy with clear reasoning. We build a challenging dataset of 140k real and generated videos designed to test detection difficulty. Using Qwen-VL with GRPO and two reward models focused on temporal artifacts and generation complexity, VidGuard-R1 achieves state-of-the-art zero-shot results and surpasses 95% accuracy after further training. Case studies show it also provides precise, interpretable explanations for its predictions.
+
+          </p>
+        </div>
+      </div>
+    </div>
+        </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <img src="static/images/figure0.png" alt="Teaser image" />
+      <h2 class="subtitle has-text-centered">
+        The overall training framework of VidGuard-R1, consisting of two stages:<br/>(1) SFT for CoT initialization, and (2) RL fine-tuning to enable deeper reasoning capabilities.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section id="contributions" class="contribution-section">
+    <div class="container is-max-desktop">
+          <div class="hero-body">
+        <!-- <img src="static/images/figure0.png" alt="Teaser image" /> -->
+      
+          <div class="columns is-centered has-text-centered">
+      <h2 class="title">Highlights</h2>
+  </div>
+  <div class="content has-text-justified">
+
+    <ul>
+    <li>
+      <strong>VidGuard-R1</strong> is the <strong>first video authenticity detector</strong> that fine-tunes a multimodal LLM with GRPO. It combines the pretrained knowledge of MLLMs for accurate classification with reinforcement learning for effective exploration. To further boost performance, we introduce <strong>two reward models</strong> that capture temporal artifacts and generation complexity across diffusion steps.
+    </li>
+    <li>
+      We build a <strong>dataset of 140k real/fake video pairs</strong> for AI-generated video detection. Using state-of-the-art generators and controlled synthesis, we ensure that distinguishing real from fake remains <strong>highly challenging</strong>.
+    </li>
+    <li>
+      VidGuard-R1 achieves <strong>state-of-the-art zero-shot accuracy above 95%</strong> on existing benchmarks, and case studies demonstrate its ability to deliver <strong>accurate, interpretable explanations</strong>.
+    </li>
+  </ul>
+  </h2>
+  </div>
+  </div>
+  </div>
+</section>
+
+
+
+
+<!-- Image carousel -->
+<div class="white-part">
+<section class="section" id="Example Videos">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+    <h2 class="title" style="margin-bottom: 0;">Example Videos</h2>
+    </div>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item" style="display: flex; align-items: center; gap: 0px; min-height: 400px;">
+        <!-- Your video here -->
+        <div style="text-align: center; margin: 0; margin-right: -50px;">
+          <p style="margin-bottom: 8px; font-size: 20px; color: #333; font-weight: bold;">AI Video (Dreamvideo)</p>
+          <video controls autoplay muted loop width="40%" style="height: 30%;">
+            <source src="static/videos/dreamvideo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div style="flex: 1; font-family: 'Consolas', 'Monaco', 'Courier New', monospace; font-size: 12px; background: #f5f5f5; padding: 5px; border-radius: 8px; solid #007acc;">
+          <div style="margin-bottom: 15px; line-height: 1.4;">Let me think about this. When evaluating whether this video is real or AI-generated, I'll consider the factors of <span style="background-color: #ffeb3b; padding: 2px;">motion consistency</span>, <span style="background-color: #ffeb3b; padding: 2px;">lighting consistency</span>, <span style="background-color: #ffeb3b; padding: 2px;">texture artifacts</span>, and <span style="background-color: #ffeb3b; padding: 2px;">physics violations</span>.<br><br>
+          <strong>1. Motion Consistency:</strong> The astronaut riding the horse appears to be in motion, but the movement looks <span style="background-color: #ffcdd2; padding: 2px;">somewhat unnatural</span>. The horse's legs and the astronaut's body seem to move in a way that doesn't quite align with real-life physics. The motion looks <span style="background-color: #ffcdd2; padding: 2px;">slightly jerky and inconsistent</span>, which is a common sign of AI-generated content.<br><br>
+          <strong>2. Lighting Consistency:</strong> The lighting in the video seems to be consistent with what one might expect in a real outdoor setting. However, the lighting on the astronaut and the horse is <span style="background-color: #ffcdd2; padding: 2px;">somewhat flat and lacks the depth and variation</span> that would be present in a real scene.<br><br>
+          <strong>3. Texture Artifacts:</strong> The textures of the astronaut's suit and the horse's coat appear <span style="background-color: #ffcdd2; padding: 2px;">somewhat artificial</span>. There are no visible details that would suggest a real-life material.<br><br>
+          <strong>4. Physics Violations:</strong> The most striking aspect is the <span style="background-color: #f8bbd9; padding: 2px; font-weight: bold;">physics violation</span>. An astronaut in a spacesuit would not be able to ride a horse in a real-world scenario.</div>
+          <div style="color: #d73a49; font-weight: bold; font-size: 15px; text-align: center;">Answer: Generated Video!</div>
+        </div>
+      </div>
+      
+      <div class="item" style="display: flex; align-items: center; gap: 0px; min-height: 400px;">
+        <!-- Your video here -->
+        <div style="text-align: center; margin: 0; margin-right: -50px;">
+          <p style="margin-bottom: 8px; font-size: 20px; color: #333; font-weight: bold;">AI Video (LaVie)</p>
+          <video controls autoplay muted loop width="70%">
+            <source src="static/videos/lavie.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div style="flex: 1; font-family: 'Consolas', 'Monaco', 'Courier New', monospace; font-size: 12px; background: #f5f5f5; padding: 5px; border-radius: 8px; solid #007acc;">
+          <div style="margin-bottom: 15px; line-height: 1.4;">Let me think about this. The image provided is a still frame, so it's challenging to assess <span style="background-color: #ffeb3b; padding: 2px;">motion consistency</span>, <span style="background-color: #ffeb3b; padding: 2px;">lighting consistency</span>, or <span style="background-color: #ffeb3b; padding: 2px;">physics violations</span> directly. However, I can analyze the <span style="background-color: #ffeb3b; padding: 2px;">texture artifacts</span>, which are often a key indicator of AI-generated images.<br><br>
+          The texture of the camera and the person's skin appears <span style="background-color: #ffcdd2; padding: 2px;">quite smooth and lacks the fine details</span> that you'd typically expect to see in a real photograph. The lighting seems consistent, but the <span style="background-color: #ffcdd2; padding: 2px;">lack of depth and detail in the texture</span> suggests this might not be a real image.<br><br>
+          If this were a real photograph, we would expect to see more subtle variations in the skin tone and the camera's surface, which are often lost in AI-generated images. The edges of the camera and the person's hair also seem <span style="background-color: #ffcdd2; padding: 2px;">a bit too sharp and clean</span>, which is not typical of real-world photography.<br><br>
+          The <span style="background-color: #f8bbd9; padding: 2px; font-weight: bold;">overall lack of fine detail and the slightly artificial appearance</span> of the textures strongly suggest that this image has been generated by an AI model.</div>
+          <div style="color: #d73a49; font-weight: bold; font-size: 15px; text-align: center;">Answer: Generated!</div>
+        </div>
+      </div>
+      
+     <div class="item" style="display: flex; align-items: center; gap: 0px; min-height: 400px;">
+      <!-- Your video here -->
+      <div style="text-align: center; margin: 0; margin-right: 5px; width: 300px;">
+        <p style="margin-bottom: 8px; font-size: 20px; color: #333; font-weight: bold;">Real Video</p>
+        <video controls autoplay muted loop style="width: 100%; height: 200px; object-fit: cover;">
+          <source src="static/videos/real_hd1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div style="flex: 1; font-family: 'Consolas', 'Monaco', 'Courier New', monospace; font-size: 12px; background: #f5f5f5; padding: 5px; border-radius: 8px; solid #007acc;">
+        <div style="margin-bottom: 15px; line-height: 1.4;">Let me think about this. When evaluating whether this video is real or AI-generated, I'll consider the factors of <span style="background-color: #ffeb3b; padding: 2px;">motion consistency</span>, <span style="background-color: #ffeb3b; padding: 2px;">lighting consistency</span>, <span style="background-color: #ffeb3b; padding: 2px;">texture artifacts</span>, and <span style="background-color: #ffeb3b; padding: 2px;">physics violations</span>.<br><br>
+        <strong>1. Motion Consistency:</strong> The hands in the video appear to be moving in a way that is <span style="background-color: #c8e6c9; padding: 2px;">consistent with human motion</span>. The way the fingers are positioned and the way the materials are being handled suggest natural human movement. There are no sudden or unnatural movements that would typically be indicative of AI-generated footage.<br><br>
+        <strong>2. Lighting Consistency:</strong> The lighting in the video seems to be <span style="background-color: #c8e6c9; padding: 2px;">consistent across the frames</span>. There are no harsh shadows or overly bright highlights that would suggest a digital manipulation. The lighting appears to be natural, possibly from an overhead source.<br><br>
+        <strong>3. Texture Artifacts:</strong> The textures of the materials being handled, such as the wire wreath and the fabric, <span style="background-color: #c8e6c9; padding: 2px;">look realistic</span>. There are no overly smooth or pixelated textures that are often seen in AI-generated images. The details in the fabric and the wire are clear and consistent.<br><br>
+        <strong>4. Physics Violations:</strong> The actions being performed, such as wrapping the fabric around the wire wreath, are <span style="background-color: #c8e6c9; padding: 2px; font-weight: bold;">physically plausible</span>. There are no obvious physics violations, and the way the fabric is being manipulated is consistent with real-world behavior.</div>
+        <div style="color: #2e7d32; font-weight: bold; font-size: 15px; text-align: center;">Answer: Real!</div>
+      </div>
+    </div>
+    
+    <div class="item" style="display: flex; align-items: center; gap: 0px; min-height: 400px;">
+      <!-- Your video here -->
+      <div style="text-align: center; margin: 0; margin-right: 5px;">
+        <p style="margin-bottom: 8px; font-size: 20px; color: #333; font-weight: bold;">Real Video</p>
+        <video controls autoplay muted loop style="width: 100%; height: 200px; object-fit: cover;">
+          <source src="static/videos/real_hd2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div style="flex: 1; font-family: 'Consolas', 'Monaco', 'Courier New', monospace; font-size: 12px; background: #f5f5f5; padding: 5px; border-radius: 8px; solid #007acc;">
+        <div style="margin-bottom: 15px; line-height: 1.4;">Let me think about this. When evaluating whether this video is real or AI-generated, I'll consider the factors of <span style="background-color: #ffeb3b; padding: 2px;">motion consistency</span>, <span style="background-color: #ffeb3b; padding: 2px;">lighting consistency</span>, <span style="background-color: #ffeb3b; padding: 2px;">texture artifacts</span>, and <span style="background-color: #ffeb3b; padding: 2px;">physics violations</span>.<br><br>
+        <strong>1. Motion Consistency:</strong> The hand movements in the video appear <span style="background-color: #c8e6c9; padding: 2px;">smooth and natural</span>. There are no sudden jerks or unnatural movements that one might expect from an AI-generated image. The hand seems to be manipulating the fan in a way that is consistent with human interaction.<br><br>
+        <strong>2. Lighting Consistency:</strong> The lighting in the video is <span style="background-color: #c8e6c9; padding: 2px;">consistent across the frames</span>. There are no noticeable changes in brightness or shadows that would indicate a shift in lighting conditions. This suggests that the video was likely taken in a controlled environment.<br><br>
+        <strong>3. Texture Artifacts:</strong> The textures of the fan, the hand, and the wooden surface <span style="background-color: #c8e6c9; padding: 2px;">appear realistic</span>. There are no overly smooth or pixelated areas that are typical of AI-generated images. The details in the fan's wires and the hand's skin texture are well-rendered.<br><br>
+        <strong>4. Physics Violations:</strong> The hand is interacting with the fan in a way that <span style="background-color: #c8e6c9; padding: 2px; font-weight: bold;">follows the laws of physics</span>. The hand is holding the fan and appears to be turning it, which is a realistic action. There are no physics violations.</div>
+        <div style="color: #2e7d32; font-weight: bold; font-size: 15px; text-align: center;">Answer: Real!</div>
+      </div>
+    </div>
+    <div class="item" style="display: flex; align-items: center; gap: 0px; min-height: 400px;">
+      <!-- Your video here -->
+      <div style="text-align: center; margin: 0; margin-right: -50px;">
+        <p style="margin-bottom: 8px; font-size: 20px; color: #333; font-weight: bold;">AI Video (Show-1)</p>
+        <video controls autoplay muted loop width="60%">
+          <source src="static/videos/show1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div style="flex: 1; font-family: 'Consolas', 'Monaco', 'Courier New', monospace; font-size: 12px; background: #f5f5f5; padding: 5px; border-radius: 8px; solid #007acc;">
+        <div style="margin-bottom: 15px; line-height: 1.4;">Let me think about this. The image provided appears to be a serene sunset over the ocean. I'll consider <span style="background-color: #ffeb3b; padding: 2px;">motion consistency</span>, <span style="background-color: #ffeb3b; padding: 2px;">lighting consistency</span>, <span style="background-color: #ffeb3b; padding: 2px;">texture artifacts</span>, and <span style="background-color: #ffeb3b; padding: 2px;">physics violations</span>.<br><br>
+        <strong>1. Motion Consistency:</strong> This image is a still frame, so there's no motion to assess here. This is a neutral point for evaluation.<br><br>
+        <strong>2. Lighting Consistency:</strong> The lighting in the image is consistent with what one would expect from a sunset. The light source (the sun) is positioned low on the horizon, casting long shadows and creating a warm, diffused light across the sky and water. This is a realistic depiction.<br><br>
+        <strong>3. Texture Artifacts:</strong> In a real photograph, the texture of the sky, clouds, and water would be more varied and detailed. The image appears <span style="background-color: #ffcdd2; padding: 2px;">smooth and lacks the fine details</span> that would be present in a real photograph. This could be a sign that the image is AI-generated.<br><br>
+        <strong>4. Physics Violations:</strong> There are no obvious physics violations in this image, as the sun is positioned correctly and the colors are natural. However, the <span style="background-color: #f8bbd9; padding: 2px; font-weight: bold;">combination of smooth texture and absence of fine detail</span> points towards the image being AI-generated.</div>
+        <div style="color: #d73a49; font-weight: bold; font-size: 15px; text-align: center;">Answer: Generated!</div>
+      </div>
+    </div>
+    <div class="item" style="display: flex; align-items: center; gap: 0px; min-height: 400px;">
+      <!-- Your video here -->
+      <div style="text-align: center; margin: 0; margin-right: 5px;">
+        <p style="margin-bottom: 8px; font-size: 20px; color: #333; font-weight: bold;">AI Video (Sora)</p>
+        <video controls autoplay muted loop style="width: 100%; height: 200px; object-fit: cover;">
+          <source src="static/videos/sora.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div style="flex: 1; font-family: 'Consolas', 'Monaco', 'Courier New', monospace; font-size: 12px; background: #f5f5f5; padding: 5px; border-radius: 8px; solid #007acc;">
+        <div style="margin-bottom: 15px; line-height: 1.4;">Let me think about this. The video shows a woman celebrating a birthday with a cake and candles. I'll consider <span style="background-color: #ffeb3b; padding: 2px;">motion consistency</span>, <span style="background-color: #ffeb3b; padding: 2px;">lighting consistency</span>, <span style="background-color: #ffeb3b; padding: 2px;">texture artifacts</span>, and <span style="background-color: #ffeb3b; padding: 2px;">physics violations</span>.<br><br>
+        <strong>1. Motion Consistency:</strong> The motion of the woman and the people around her seems smooth and realistic, which is a good sign. However, upon closer inspection, there are some subtle inconsistencies that might indicate AI generation.<br><br>
+        <strong>2. Lighting Consistency:</strong> The lighting appears natural and consistent, suggesting it might be filmed indoors with ambient light. However, the shadows and highlights on the cake and the woman's face seem <span style="background-color: #ffcdd2; padding: 2px;">a bit too perfect, lacking the slight imperfections</span> that are usually present in real-world footage.<br><br>
+        <strong>3. Texture Artifacts:</strong> The texture of the woman's clothing and the cake appears <span style="background-color: #ffcdd2; padding: 2px;">slightly unnatural, with some areas looking a bit too smooth or too sharp</span>, which is often a sign of AI generation.<br><br>
+        <strong>4. Physics Violations:</strong> The physics of the scene seem to hold up well. The woman is blowing out the candles, and the smoke is rising naturally. However, the <span style="background-color: #f8bbd9; padding: 2px; font-weight: bold;">slight inconsistencies in texture and lighting</span> suggest that it might be an AI-generated video.</div>
+        <div style="color: #d73a49; font-weight: bold; font-size: 15px; text-align: center;">Answer: Generated!</div>
+      </div>
+    </div>
+    <div class="item" style="display: flex; align-items: center; gap: 0px; min-height: 400px;">
+      <!-- Your video here -->
+      <div style="text-align: center; margin: 0; margin-right: 5px;">
+        <p style="margin-bottom: 8px; font-size: 20px; color: #333; font-weight: bold;">AI Video (SVD)</p>
+        <video controls autoplay muted loop style="width: 100%; height: 200px; object-fit: cover;">
+          <source src="static/videos/svd.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div style="flex: 1; font-family: 'Consolas', 'Monaco', 'Courier New', monospace; font-size: 12px; background: #f5f5f5; padding: 5px; border-radius: 8px; solid #007acc;">
+        <div style="margin-bottom: 15px; line-height: 1.4;">Let me think about this. When evaluating whether this video is real or AI-generated, I'll consider the four factors: <span style="background-color: #ffeb3b; padding: 2px;">motion consistency</span>, <span style="background-color: #ffeb3b; padding: 2px;">lighting consistency</span>, <span style="background-color: #ffeb3b; padding: 2px;">texture artifacts</span>, and <span style="background-color: #ffeb3b; padding: 2px;">physics violations</span>.<br><br>
+        <strong>1. Motion Consistency:</strong> In the video, the two individuals appear to be engaged in a conversation. Their movements seem natural and consistent with human behavior. There are no sudden jerks or unnatural movements that would suggest AI generation.<br><br>
+        <strong>2. Lighting Consistency:</strong> The lighting in the video appears to be natural, likely from the stadium lights. There are no harsh shadows or overly bright highlights that would be inconsistent with real-world lighting conditions.<br><br>
+        <strong>3. Texture Artifacts:</strong> Upon close inspection, the textures of the clothing, the background, and the environment appear natural. There are no obvious digital artifacts or distortions that are typically seen in AI-generated images. The details in the uniforms, the grass, and the stadium elements all look realistic.<br><br>
+        <strong>4. Physics Violations:</strong> The individuals in the video are standing upright and interacting in a way that is physically plausible. However, despite these realistic elements, <span style="background-color: #f8bbd9; padding: 2px; font-weight: bold;">advanced AI techniques might be able to mimic real-world conditions very closely</span>, suggesting this could still be AI-generated.</div>
+        <div style="color: #d73a49; font-weight: bold; font-size: 15px; text-align: center;">Answer: Generated!</div>
+      </div>
+    </div>
+  </div>
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="columns is-centered has-text-centered">
+      <h2 class="title">BibTeX</h2>
+      </div>
+      <pre><code>TOBE UPDATED
+}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using this <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">template</a>.
+            <!-- You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. -->
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
